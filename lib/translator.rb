@@ -27,6 +27,7 @@ def get_japanese_emoticon(file, e_emoticon)
     if j_emoticon == ""
       j_meaning = apology
     end
+    binding.pry 
   end
   j_emoticon
 end
