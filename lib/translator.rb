@@ -19,13 +19,15 @@ end
 
 
 
+
+
+
 def get_japanese_emoticon(file, e_emoticon)
   emoticons = load_library(file)
   j_emoticon = ""
   apology = "Sorry, that emoticon was not found"
   emoticons.each do |emotion, lang|
     lang.each do |inner_key,emoticon|
-      binding.pry 
       if emoticon == e_emoticon
         j_emoticon =
       end
@@ -37,24 +39,6 @@ def get_japanese_emoticon(file, e_emoticon)
   j_emoticon
 end
 
-
-# def get_japanese_emoticon(file, e_emoticon)
-#   emoticons = load_library(file)
-#   j_emoticon = ""
-#   apology = "Sorry, that emoticon was not found"
-#   emoticons.each do |emotion, lang|
-#     lang.each do |inner_key,emoticon|
-#       if emoticon == e_emoticon
-#         j_emoticon =
-#       end
-#     end
-#     if j_emoticon == ""
-#       j_emoticon = apology
-#     end
-#   end
-#   j_emoticon
-# end
-#
 def get_english_meaning(file,j_emoticon)
   emoticons = load_library(file)
   eng_meaning = ""
