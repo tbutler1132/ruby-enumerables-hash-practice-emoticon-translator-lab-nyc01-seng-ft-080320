@@ -24,7 +24,7 @@ def get_japanese_emoticon(file, e_emoticon)
     lang.each do |inner_key,emoticon|
       # binding.pry
       if emoticon == e_emoticon
-        j_emoticon = emoticons[:emotion][:japanese][:emoticon] 
+        j_emoticon = emoticons[:emotion][:japanese][:emoticon]
       end
     end
     if j_emoticon == ""
