@@ -16,21 +16,19 @@ end
 
 # if emotion[:english] = e_emomitcon than return emotion[:japanese]
 
-def get_japanese_emoticon(file, e_emoticon)
-  emoticons = load_library(file)
-  j_emoticon = ""
-  apology = "Sorry, that emoticon was not found"
-  emoticons.each do |emotion, lang|
-    lang.each do |inner_key,emoticon|
-      if emoticon == e_emoticon
-        j_emoticon = emoticon
-      end
-    end
-    if j_emoticon == ""
-      j_emoticon = apology
+def get_japanese_emoticon(yaml_file, eng_emoticon)
+  translation = ""
+  new_hash = load_library(yaml_file)
+  new_hash.each do |name, languages|
+      if languages[:english] == eng_emoticon 
+      translation = languages[:japanese]
     end
   end
-  j_emoticon
+    if translation == ""
+      return "Sorry, that emoticon was not found"
+    else
+      return translation
+    end
 end
 #
 def get_english_meaning(file,j_emoticon)
