@@ -22,13 +22,13 @@ def get_japanese_emoticon(file, e_emoticon)
   apology = "Sorry, that emoticon was not found"
   emoticons.each do |emotion, lang|
     lang.each do |inner_key,emoticon|
-      binding.pry 
+      binding.pry
       if emoticon == e_emoticon
         j_emoticon = emotion
       end
     end
     if j_emoticon == ""
-      j_meaning = apology
+      j_emoticon = apology
     end
   end
   j_emoticon
