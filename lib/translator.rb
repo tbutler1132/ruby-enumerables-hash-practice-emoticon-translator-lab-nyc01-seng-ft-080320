@@ -16,7 +16,7 @@ end
 
 def get_japanese_emoticon(file, e_emoticon)
   emoticons = load_library(file)
-  j_meaning = ""
+  j_emoticon = ""
   apology = "Sorry, that emoticon was not found"
   emoticons.each do |emotion, lang|
     lang.each do |inner_key,emoticon|
