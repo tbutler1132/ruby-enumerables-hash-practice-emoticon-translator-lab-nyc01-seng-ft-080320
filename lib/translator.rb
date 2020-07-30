@@ -14,6 +14,8 @@ def load_library(file_path = 'lib/emoticons.yml')
   end
 end
 
+# if emotion[:english] = e_emomitcon than return emotion[:japanese]
+
 def get_japanese_emoticon(file, e_emoticon)
   emoticons = load_library(file)
   j_emoticon = ""
@@ -27,7 +29,6 @@ def get_japanese_emoticon(file, e_emoticon)
     if j_emoticon == ""
       j_meaning = apology
     end
-    binding.pry 
   end
   j_emoticon
 end
